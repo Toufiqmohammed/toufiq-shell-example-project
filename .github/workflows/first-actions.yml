@@ -9,7 +9,8 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
 
-      - name: Say Hello
+      - name: Verify EC2 Environment
         run: |
-          echo "Success! The workflow is executing directly inside my Ubuntu EC2 server!"
-          uname -a
+          echo "Success! The workflow is executing directly inside my Ubuntu EC2 server."
+          echo "Current directory contents:"
+          ls -la
